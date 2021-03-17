@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:clipChildren="false"
@@ -11,8 +12,11 @@
         android:id="@+id/button"
         android:layout_width="64dp"
         android:layout_height="64dp"
+        android:background="?attr/actionBarItemBackground"
         android:clickable="true"
-        android:gravity="center">
+        android:focusable="true"
+        android:gravity="center"
+        tools:ignore="UselessParent">
 
         <ImageView
             android:id="@+id/buttonImage"
@@ -20,6 +24,7 @@
             android:layout_height="@dimen/default_delete_button_size"
             android:adjustViewBounds="true"
             android:clickable="false"
+            android:contentDescription="@null"
             android:focusable="false"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_backspace" />
