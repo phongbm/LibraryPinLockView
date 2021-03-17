@@ -47,6 +47,9 @@ public class CustomizationOptionsBundle {
     }
 
     public Drawable getButtonBackgroundDrawable() {
+        if (buttonBackgroundDrawable == null) {
+            return null;
+        }
         return buttonBackgroundDrawable.getConstantState().newDrawable();
     }
 
