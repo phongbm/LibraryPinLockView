@@ -100,7 +100,7 @@ public class PinLockAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                         mCustomizationOptionsBundle.getDeleteButtonSize());
                 holder.mButtonImage.setLayoutParams(params);
             } else {
-                holder.mDeleteButton.setVisibility(View.GONE);
+                holder.mDeleteButton.setVisibility(View.INVISIBLE);
             }
         }
     }
