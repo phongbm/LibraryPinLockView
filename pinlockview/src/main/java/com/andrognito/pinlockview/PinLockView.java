@@ -73,9 +73,9 @@ public class PinLockView extends RecyclerView {
                     }
 
                 } else {
-                    if (mPinLockListener != null) {
-                        mPinLockListener.onComplete(mPin);
-                    }
+//                    if (mPinLockListener != null) {
+//                        mPinLockListener.onComplete(mPin);
+//                    }
                 }
             }
         }
