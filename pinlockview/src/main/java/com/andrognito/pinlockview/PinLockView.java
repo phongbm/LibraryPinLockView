@@ -60,19 +60,7 @@ public class PinLockView extends RecyclerView {
                     }
                 }
             } else {
-                if (!isShowDeleteButton()) {
-                    resetPinLockView();
-                    mPin = mPin.concat(String.valueOf(keyValue));
-
-                    if (isIndicatorDotsAttached()) {
-                        mIndicatorDots.updateDot(mPin.length());
-                    }
-
-                    if (mPinLockListener != null) {
-                        mPinLockListener.onPinChange(mPin.length(), mPin);
-                    }
-
-                }
+                resetPinLockView();
             }
         }
     };
