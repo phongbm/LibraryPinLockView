@@ -3,7 +3,6 @@ package com.andrognito.pinlockview;
 import android.content.Context;
 import android.graphics.PorterDuff;
 import android.graphics.Rect;
-import android.os.SystemClock;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -180,20 +179,8 @@ public class PinLockAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             super(itemView);
             mNumberButton = itemView.findViewById(R.id.button);
             mNumberButton.setOnClickListener(new View.OnClickListener() {
-                private static final long MIN_CLICK_INTERVAL = 500L;
-                private long lastClickTime = 0L;
-
                 @Override
                 public void onClick(View v) {
-                    long currentClickTime = SystemClock.uptimeMillis();
-                    long elapsedTime = currentClickTime - lastClickTime;
-
-                    lastClickTime = currentClickTime;
-
-                    if (elapsedTime <= MIN_CLICK_INTERVAL) {
-                        return;
-                    }
-
                     if (mOnNumberClickListener != null) {
                         mOnNumberClickListener.onNumberClicked((Integer) v.getTag());
                     }
